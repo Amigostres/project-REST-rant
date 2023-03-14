@@ -1,7 +1,15 @@
 const express = require(`express`)
+const PORT = require(`dotenv`).config()
 const app = express()
 
 app.get(`/`, (req, res) => {
-    res.send(`hello world`)
+    res.send(`HELLO CLASS!!`)
 })
-app.listen(3000)
+
+app.get(`*`, (req, res) => {
+    res.status(404).send(`<h1 style = "color:red;">404 PAGE</h1>`)
+})
+
+app.listen(process.env.PORT, ()=> {
+    console.log(`server is live ${process.env.PORT}`);
+})
