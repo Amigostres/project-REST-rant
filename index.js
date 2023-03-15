@@ -17,7 +17,8 @@ app.get(`/`, (req, res) => {
 
 
 app.get(`*`, (req, res) => {
-    res.status(404).send(`<h1 style = "color:red;">404 PAGE</h1>`)
+    // res.status(404).send(`<h1 style = "color:red;">404 PAGE</h1>`)
+    res.render(`error404`)
 })
 
 
