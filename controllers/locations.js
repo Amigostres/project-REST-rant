@@ -1,6 +1,11 @@
 const express = require(`express`)
 const router = express.Router()// use .router when making new routes
 
+
+router.get(`/new`, (req, res) => {
+    res.render(`places/new`, {})
+})
+
 // GET /places
 router.get('/', (req, res) => {
     let places = [{
@@ -20,6 +25,8 @@ router.get('/', (req, res) => {
       
     res.render('../views/places/index', {places})
   })
+
+
   
 
 module.exports = router // this will make sure we can use /locations path
