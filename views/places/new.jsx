@@ -6,7 +6,7 @@ function newForm (){
         <Default>
             <main>
                 <h1>Let's add a new place</h1>
-                <form method="POST" action="/places">
+                <form method="POST" action="/place">
                     <div className="form-group">
                     <label htmlFor="name">Place name</label>
                     <input className="form-control" type="text" id="name" name="name" required/>
@@ -28,7 +28,7 @@ function newForm (){
                     <input className="form-control" type="text" id="cuisines" name="cuisines" required/>
                     </div>
 
-                    <input className="btn btn-primary" type="submit" value="add place"/>
+                    <input className="btn btn-primary" type="submit" value="Add Place"/>
                     
                 
                 </form>

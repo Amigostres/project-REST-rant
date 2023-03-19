@@ -10,7 +10,7 @@ router.get(`/new`, (req, res) => {
 // GET /places
 router.get('/', (req, res) => {
     res.render('../views/places/index', { places })
-    })
+})
 router.post('/', (req, res) => {
     console.log(req.body)
     if (!req.body.pic) {
@@ -24,8 +24,8 @@ router.post('/', (req, res) => {
         req.body.state = 'USA'
     }
     places.push(req.body)
-    res.redirect('/places')
-    })
+    res.redirect('/place')
+})
 
   
 

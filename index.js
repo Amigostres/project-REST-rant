@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(`/place`, require(`./controllers/locations`))
 
 
+
 app.get(`/`, (req, res) => {
     // res.send(`HELLO CLASS!!`)
     res.render(`home`)
