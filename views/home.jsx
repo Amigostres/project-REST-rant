@@ -5,7 +5,7 @@ function home() {
     return(
         <Default>
             <main>
-                <h1>HOMESSS PAGE! LOL</h1>
+                <h1>HOMES PAGE!</h1>
             </main>
         </Default>
     )
