@@ -27,8 +27,29 @@ router.post('/', (req, res) => {
     res.redirect('/place')
 })
 
-  
-
+router.get('/:id', (req, res) => {
+    let id = Number(req.params.id)
+    if (isNaN(id)) {// if the route is not a number render error404
+      res.render('error404')
+    }else if (!places[id]){//if the index does not exist render error404
+        res.render(`error404`)
+    }else {
+      res.render('places/show', {place: places[id], id})
+    }
+  })
+router.delete(`/:id`, (req, res) => {
+    let id = Number(req.params.id)
+    if(isNaN(id)){
+        res.render(`error404`)
+    }
+    else if(!places[id]){
+        res.render(`error404`)
+    }
+    else{
+        places.splice(id, 1)
+        res.redirect(`/place`)
+    }
+})
 
 
   

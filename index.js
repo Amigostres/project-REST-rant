@@ -1,12 +1,16 @@
 const express = require(`express`)
 const PORT = require(`dotenv`).config()
 const app = express()
+const methodOverride = require(`method-override`)
 
 //middleware
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(`public`))
+app.use(methodOverride('_method'))
+
+
 
 app.use(`/place`, require(`./controllers/locations`))
 
