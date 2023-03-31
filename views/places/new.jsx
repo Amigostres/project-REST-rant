@@ -6,7 +6,7 @@ function newForm (){
         <Default>
             <main>
                 <h1>Let's add a new place</h1>
-                <form method="POST" action="/place">
+                <form method="POST" action="/models/place">
                     <div className="form-group">
                     <label htmlFor="name">Place name</label>
                     <input className="form-control" type="text" id="name" name="name" required/>

@@ -1,14 +1,15 @@
 const express = require(`express`)
 const PORT = require(`dotenv`).config()
 const app = express()
-const methodOverride = require(`method-override`)
+const methodOverride = require(`method-override`) // https://expressjs.com/en/resources/middleware/method-override.html
 
 //middleware
+app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(`public`))
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method'))//lets you use http verbs that client's browser does not let you usually use such as PUT, DELETE
 
 
 

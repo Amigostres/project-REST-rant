@@ -4,8 +4,12 @@ const Default = require(`./default`)
 function home() {
     return(
         <Default>
-            <main>
+            <main className='text-center'>
                 <h1>HOMES PAGE!</h1>
+                <br />
+                <div className="text-center">
+                    <img src="/images/pancakes.avif" alt="Pancakes" />
+                </div>
             </main>
         </Default>
     )
