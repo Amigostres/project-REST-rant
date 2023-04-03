@@ -26,14 +26,6 @@ function show(data) {
                     </div>
                 </div>
                 <h4>Comments</h4>
-
-
-
-
-
-
-
-
             </main>
         </Default>
     )

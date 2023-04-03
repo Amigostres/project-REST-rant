@@ -12,7 +12,6 @@ app.use(express.static(`public`))
 app.use(methodOverride('_method'))//lets you use http verbs that client's browser does not let you usually use such as PUT, DELETE
 
 
-
 app.use(`/place`, require(`./controllers/locations`))
 
 
